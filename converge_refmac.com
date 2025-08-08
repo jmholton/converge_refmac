@@ -495,6 +495,7 @@ EOF-refmac
             set minRfree = $Rfree
             set minRfree_n = $n
             cp -p refmacout.pdb refmacout_minRfree.pdb
+            cp -p refmacout.mtz refmacout_minRfree.mtz
         endif
     endif
 
