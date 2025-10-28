@@ -489,6 +489,8 @@ EOF-refmac
             set minR = $R
             set minR_n = $n
             cp -p refmacout.pdb refmacout_minR.pdb
+            cp -p refmacout.mtz refmacout_minR.mtz
+            cp -p ${tempfile}.log refmacout_minR.log
         endif
         set test = `echo $Rfree $minRfree | awk '{print ($1<=$2)}'`
         if($test) then
@@ -496,6 +498,7 @@ EOF-refmac
             set minRfree_n = $n
             cp -p refmacout.pdb refmacout_minRfree.pdb
             cp -p refmacout.mtz refmacout_minRfree.mtz
+            cp -p ${tempfile}.log refmacout_minRfree.log
         endif
     endif
 
